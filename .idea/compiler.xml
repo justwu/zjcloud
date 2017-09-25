@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zj-common" />
+        <module name="zj-crm" />
+        <module name="zj-eurekaserver" />
+        <module name="zj-otaifc" />
+        <module name="zj-pay" />
+        <module name="zj-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="zj-common" target="1.5" />
+      <module name="zj-crm" target="1.5" />
+      <module name="zj-eureka-server" target="1.5" />
+      <module name="zj-eurekaserver" target="1.7" />
+      <module name="zj-otaifc" target="1.7" />
+      <module name="zj-pay" target="1.5" />
+      <module name="zj-ribbonconsumer" target="1.5" />
+      <module name="zj-service" target="1.7" />
+      <module name="zj-travelagent" target="1.5" />
+      <module name="zjcloud" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/zj-common/zj-common.iml" filepath="$PROJECT_DIR$/zj-common/zj-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zj-crm/zj-crm.iml" filepath="$PROJECT_DIR$/zj-crm/zj-crm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zj-eurekaserver/zj-eurekaserver.iml" filepath="$PROJECT_DIR$/zj-eurekaserver/zj-eurekaserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zj-otaifc/zj-otaifc.iml" filepath="$PROJECT_DIR$/zj-otaifc/zj-otaifc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zj-pay/zj-pay.iml" filepath="$PROJECT_DIR$/zj-pay/zj-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zj-service/zj-service.iml" filepath="$PROJECT_DIR$/zj-service/zj-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zjcloud.iml" filepath="$PROJECT_DIR$/zjcloud.iml" />
+    </modules>
+  </component>
+</project>
