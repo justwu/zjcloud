@@ -12,6 +12,7 @@
         <module name="zj-otaifc" />
         <module name="zj-pay" />
         <module name="zj-service" />
+        <module name="zj-service-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +24,7 @@
       <module name="zj-pay" target="1.5" />
       <module name="zj-ribbonconsumer" target="1.5" />
       <module name="zj-service" target="1.7" />
+      <module name="zj-service-api" target="1.7" />
       <module name="zj-travelagent" target="1.5" />
       <module name="zjcloud" target="1.5" />
     </bytecodeTargetLevel>

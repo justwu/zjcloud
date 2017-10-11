@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.zj.exception.DefinedException;
+import com.zj.mq.MqSender;
 import com.zj.pojo.otarequest.WxRequestForm;
 import com.zj.service.api.OtaService;
 import org.slf4j.Logger;
@@ -15,8 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Random;
 
 @RestController
 @RequestMapping(value = "/ota", method = RequestMethod.POST)
@@ -30,17 +29,19 @@ public class Otacontroller {
     @Qualifier("OtaServiceImpl")
     OtaService otaService;
 
-
     @Autowired
     private DiscoveryClient discoveryClient;
 
-    @RequestMapping("/av")
+    @Autowired
+    private MqSender mqSender;
+
+    @RequestMapping("/sections")
     public ArrayNode wxQueryAvailProduct(@RequestBody WxRequestForm requestForm) throws DefinedException {
         ArrayNode result = otaService.wxQuerySections(requestForm);
         return result;
     }
 
-    @RequestMapping("/roomtype")
+    @RequestMapping("/roomtypes")
     public ObjectNode wxQueryRoomtypes(@RequestBody WxRequestForm requestForm) throws DefinedException {
         ObjectNode result = otaService.wxQueryRoomtypes(requestForm);
         if (justloger != null) {
@@ -53,9 +54,9 @@ public class Otacontroller {
 
     @RequestMapping("/showreg")
     public ObjectNode wxShowReg()throws  Exception{
-        int sleeptime=new Random().nextInt(2500);
+      /*  int sleeptime=new Random().nextInt(2500);
         logger.info("本次睡眠时间"+sleeptime+"ms");
-        Thread.currentThread().sleep(sleeptime);
+        Thread.currentThread().sleep(sleeptime);*/
 
         ObjectNode node= new ObjectMapper().createObjectNode();
         ArrayNode arrayNode=new ObjectMapper().createArrayNode();
@@ -64,6 +65,9 @@ public class Otacontroller {
         }
         node.put("name","999");
         node.set("rows",arrayNode);
+
+        mqSender.send();
+
         return node;
     }
 

@@ -3,12 +3,15 @@ package zjcloud.zjotaifc.servicecall;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.command.AsyncResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.concurrent.Future;
 
 @Service
 public class Zjotaservice {
@@ -31,6 +34,18 @@ public class Zjotaservice {
         ObjectNode objectNode=new ObjectMapper().createObjectNode();
         objectNode.put("result","fail");
         return objectNode.toString();
+    }
+
+
+    @HystrixCommand
+    public Future<String> asyncCall(final String url, final Object requestform) {
+        return new AsyncResult<String>() {
+            @Override
+            public String invoke() {
+                ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, requestform, String.class);
+                return responseEntity.getBody();
+            }
+        };
     }
 
 
