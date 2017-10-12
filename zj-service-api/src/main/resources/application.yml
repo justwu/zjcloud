@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: zjserviceapi
-debug: false
-logging:
-  level: warn
-server:
-  port: 7000
-
