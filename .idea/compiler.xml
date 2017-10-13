@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="zj-common" />
+        <module name="zj-configserver" />
         <module name="zj-crm" />
         <module name="zj-eurekaserver" />
         <module name="zj-otaifc" />
@@ -17,6 +18,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="zj-common" target="1.5" />
+      <module name="zj-configserver" target="1.7" />
       <module name="zj-crm" target="1.5" />
       <module name="zj-eureka-server" target="1.5" />
       <module name="zj-eurekaserver" target="1.7" />

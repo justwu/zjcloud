@@ -60,13 +60,13 @@ public class Otacontroller {
 
         ObjectNode node= new ObjectMapper().createObjectNode();
         ArrayNode arrayNode=new ObjectMapper().createArrayNode();
-        for (String s : discoveryClient.getServices()) {
+      /*  for (String s : discoveryClient.getServices()) {
             arrayNode.add(s);
-        }
+        }*/
         node.put("name","999");
         node.set("rows",arrayNode);
 
-        mqSender.send();
+//        mqSender.send();
 
         return node;
     }

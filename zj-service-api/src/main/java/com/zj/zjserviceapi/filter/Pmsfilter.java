@@ -4,11 +4,14 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
+@Component
 public class Pmsfilter extends ZuulFilter {
-    private Logger logger = LoggerFactory.getLogger(OtaReqfilter.class);
+    private Logger logger = LoggerFactory.getLogger(Pmsfilter.class);
 
     @Override
     public String filterType() { //过滤触发的生命周期
@@ -36,7 +39,10 @@ public class Pmsfilter extends ZuulFilter {
         Object o = request.getParameter("signid");
         if (o != null) {
             ctx.setSendZuulResponse(false);
-            ctx.setResponseStatusCode(401);
+            ctx.setResponseStatusCode(HttpServletResponse.SC_FORBIDDEN);
+            ctx.set("error.status_code", HttpServletResponse.SC_FORBIDDEN);
+            ctx.set("error.message", "禁止访问");
+
             logger.error("禁止访问");
         }
         return null;

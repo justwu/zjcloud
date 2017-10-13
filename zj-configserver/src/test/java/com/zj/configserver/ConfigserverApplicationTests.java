@@ -1,4 +1,4 @@
-package zjcloud.zjotaifc;
+package com.zj.configserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,10 +7,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ZjOtaifcApplicationTests {
+public class ConfigserverApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }

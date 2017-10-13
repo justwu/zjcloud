@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zj</groupId>
-    <artifactId>zj-service-api</artifactId>
+    <artifactId>configserver</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>zj-service-api</name>
-    <description>Demo project for Spring Boot</description>
+    <name>configserver</name>
+    <description>服务属性配置中心</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -22,26 +22,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.7</java.version>
-        <spring-cloud.version>Dalston.SR3</spring-cloud.version>
+        <spring-cloud.version>Dalston.SR4</spring-cloud.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
-
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zuul</artifactId>
-        </dependency>
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -36,7 +36,7 @@ public class OtaController {
         return zjotaservice.callZjsercice(url,null);
    }
 
-    @RequestMapping(value = "feign_serction")
+    @RequestMapping(value = "feign_section")
     public String feignSection() {
         return otaService.showreg();
     }

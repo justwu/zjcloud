@@ -17,9 +17,9 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 @EnableDiscoveryClient
 @SpringBootApplication  //springcloudapplication 自动包含eureka客户端,断路器注解
-public class ZjOtaifcApplication {
+public class OtaifcApplication {
 
-	private Logger logger= LoggerFactory.getLogger(ZjOtaifcApplication.class);
+    private Logger logger = LoggerFactory.getLogger(OtaifcApplication.class);
 
 	@Bean
 	@LoadBalanced
@@ -29,6 +29,6 @@ public class ZjOtaifcApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(ZjOtaifcApplication.class, args);
-	}
+        SpringApplication.run(OtaifcApplication.class, args);
+    }
 }
