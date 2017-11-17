@@ -10,6 +10,7 @@
         <module name="zj-configserver" />
         <module name="zj-crm" />
         <module name="zj-eurekaserver" />
+        <module name="zj-mybatis" />
         <module name="zj-otaifc" />
         <module name="zj-pay" />
         <module name="zj-service" />
@@ -22,6 +23,7 @@
       <module name="zj-crm" target="1.5" />
       <module name="zj-eureka-server" target="1.5" />
       <module name="zj-eurekaserver" target="1.7" />
+      <module name="zj-mybatis" target="1.7" />
       <module name="zj-otaifc" target="1.7" />
       <module name="zj-pay" target="1.5" />
       <module name="zj-ribbonconsumer" target="1.5" />

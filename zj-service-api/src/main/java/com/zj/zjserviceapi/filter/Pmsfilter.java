@@ -37,6 +37,7 @@ public class Pmsfilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         Object o = request.getParameter("signid");
+        logger.info("URL" + request.getRequestURI());
         if (o != null) {
             ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(HttpServletResponse.SC_FORBIDDEN);

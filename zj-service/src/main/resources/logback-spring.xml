@@ -2,7 +2,7 @@
 <configuration scan="true" scanPeriod="60 seconds">
 
     <springProperty scope="context" name="logLevel" source="log.level"/>
-    <springProperty scope="context" name="logPath" source="log.path"/>
+    <springProperty scope="context" name="logPath" source="log.path" defaultValue="d:/ZJLOGDEV"/>
     <springProperty scope="context" name="splogLevel" source="log.splevel"/>
     <springProperty scope="context" name="serverport" source="server.port"/>
 

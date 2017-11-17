@@ -66,7 +66,7 @@ public class Otacontroller {
         node.put("name","999");
         node.set("rows",arrayNode);
 
-//        mqSender.send();
+        mqSender.send();
 
         return node;
     }

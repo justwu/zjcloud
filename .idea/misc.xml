@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/zj-otaifc/pom.xml" />
         <option value="$PROJECT_DIR$/zj-service-api/pom.xml" />
         <option value="$PROJECT_DIR$/zj-configserver/pom.xml" />
+        <option value="$PROJECT_DIR$/zj-mybatis/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

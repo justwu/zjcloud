@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by flyhigh on 2017/6/11.
  */
 @Controller
+@RequestMapping(value = "/test")
 public class IndexController {
     @Value("${r8path}")
     private String r8pth;
